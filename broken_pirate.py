@@ -1,5 +1,6 @@
-greeting = input("Hello, possible pirate! What's the password?)
-if greeting in ["Arrr!"]: # NG replaced ) by ]
+greeting = input("Hello, possible pirate! What's the password?") # Added missing speech mark
+
+if greeting in ["Arrr!"]:
 	print("Go away, pirate.")
-elif
-print("Greetings, hater of pirates!")
+else: # Changed to else, and added indentation
+    print("Greetings, hater of pirates!")
