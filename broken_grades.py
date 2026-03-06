@@ -21,36 +21,36 @@
 
 exam_one = int(input("Input exam grade one: "))
 
-exam_two = input("Input exam grade two: "))
+exam_two = int(input("Input exam grade two: "))
 
-exam_3 = str(input("Input exam grade three: "))
+exam_three = int(input("Input exam grade three: ")) # Error: Use consistent naming patterns...
+# Cast it to integer, not string
 
-grades = [exam_one exam_two exam_three]
+grades = [exam_one, exam_two, exam_three] # Added commas to seperate each grade
+
 sum = 0
-for grade in grade:
+for grade in grades: # Made grade -> grades -- naming convention
   sum = sum + grade
 
-avg = sum / len(grdes)
+avg = sum / len(grades) # Typo
 
-if avg >= 90:
+if avg >= 90: # Condition states 90 + (problem with the question - as per requirements 90 is not accounted for...)
     letter_grade = "A"
-elif avg >= 80 and avg < 90
+elif avg >= 80 and avg <= 89: # Added colon to mark the end of the elif statement
     letter_grade = "B"
-elif avg > 69 and avg < 80:
-    letter_grade = "C'
-elif avg <= 69 and avg >= 65:
+elif avg >= 70 and avg <= 79: # Fixed condition to make it easier to understand, and suit requirements
+    letter_grade = "C" # Error: Use consitent syntax "" vs "' -> will also cause a syntax error
+elif avg >= 60 and avg <= 69:
     letter_grade = "D"
-elif:
+else: # No condition so else:
     letter_grade = "F"
 
-for grade in grades:
-    print("Exam: " + str(grade))
+# Removed the unnessecary for loop
+print("Exams: " + str(grades[0]) + ", " + str(grades[1]) + ", " + str(grades[2])) # Each exam mark is now printed...
+print("Average: " + str(avg))
+print("Grade: " + letter_grade)
 
-    print("Average: " + str(avg))
-
-    print("Grade: " + letter_grade)
-
-if letter-grade is "F":
-    print "Student is failing."
+if letter_grade == "F": # Typo - and comparison operator added...
+    print ("Student is failing.") # Missing brackets
 else:
-    print "Student is passing."
+    print ("Student is passing.")
